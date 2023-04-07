@@ -1,23 +1,265 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-{% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-我的第一篇blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" class="article-date">
+  <time class="dt-published" datetime="2023-04-07T16:27:26.000Z" itemprop="datePublished">2023-04-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/04/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/">我的第一篇blog</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="项目拿来练手该怎么练？"><a href="#项目拿来练手该怎么练？" class="headerlink" title="项目拿来练手该怎么练？"></a>项目拿来练手该怎么练？</h2><p>Q:项目拿来练手该怎么练，是从零跟着他敲一遍吗？</p>
+<p>A:不不不，跟着他敲一遍是没什么意义的。我来说一下我的步骤吧。拿到一个开源项目&#x2F;接手别人的项目，第一步，看到用到什么技术栈，也就是说用到了什么技术&#x2F;知识点，这样你就会有一个大概的方向。第二步，看架构&#x2F;框架，也可以说是看项目的目录结构，这一步可以知道各个模块是怎么通信的，这个时候可以用纸&#x2F;思维导图写出来，加深印象。第三步，跑项目&#x2F;看功能，看一下这个项目实现了什么功能，可以用它来做什么，这一步骤也可以用纸记录一下。第四步，从目录结构看一下整个项目的入口文件引入了什么全局的东西，这个可以单独抽出来学习。第五步，阅读源码，这个最好就是一个一个模块&#x2F;功能去阅读，搞清楚是怎么实现的，这一部分的话是最关键的(废话)，只看一次的话很难会搞懂，所以要多看几次，为什么用到这个API，为什么要以这种形式写呢，能不能写得更简洁一点，能不能抽取出来具有更高的复用性呢。这些都是要去考虑的。第六步，当做好前五步，你就对这个项目很熟悉了，然后就可以做修改了，要么添加功能，要么抽取模块，要么降低复杂度。最后，学习项目最关键的是思想和技术的运用，要对整体做一个学习而不是只盯着某一个模块或者是某一段代码。</p>
+<hr>
+<h2 id="大脸-UP-自带课代表"><a href="#大脸-UP-自带课代表" class="headerlink" title="大脸 UP 自带课代表"></a>大脸 UP 自带课代表</h2><p>gogocode 项目地址：<a target="_blank" rel="noopener" href="https://github.com/thx/gogocode%EF%BC%88%E6%B1%82%E4%B8%80%E4%B8%AAstar%EF%BC%81%EF%BC%89">https://github.com/thx/gogocode（求一个star！）</a></p>
+<p>找开源项目的一些途径<br>• <a target="_blank" rel="noopener" href="https://github.com/trending/">https://github.com/trending/</a><br>• <a target="_blank" rel="noopener" href="https://github.com/521xueweihan/HelloGitHub">https://github.com/521xueweihan/HelloGitHub</a><br>• <a target="_blank" rel="noopener" href="https://github.com/ruanyf/weekly">https://github.com/ruanyf/weekly</a><br>• <a target="_blank" rel="noopener" href="https://www.zhihu.com/column/mm-fe">https://www.zhihu.com/column/mm-fe</a></p>
+<p>特殊的查找资源小技巧-常用前缀后缀<br>• 找百科大全 awesome xxx<br>• 找例子 xxx sample<br>• 找空项目架子 xxx starter &#x2F; xxx boilerplate<br>• 找教程 xxx tutorial</p>
+<hr>
+<h2 id="blog框架网址"><a href="#blog框架网址" class="headerlink" title="blog框架网址"></a>blog框架网址</h2><p>wordpress : <a target="_blank" rel="noopener" href="http://www.wordpress.org/">www.wordpress.org</a></p>
+<p>hexo <a target="_blank" rel="noopener" href="http://www.hexo.io/">www.hexo.io</a></p>
+<p>jekyll : <a target="_blank" rel="noopener" href="http://www.jekyll.com/">www.jekyll.com</a></p>
+<p>gohugo: <a target="_blank" rel="noopener" href="http://www.gohugo.org/">www.gohugo.org</a></p>
+<p>vuepress: vuepress.vuejs.org</p>
+<p>solo : solo.b3log.org</p>
+<hr>
+<h2 id="windows下dos命令"><a href="#windows下dos命令" class="headerlink" title="windows下dos命令"></a>windows下dos命令</h2><p>dir  		        #查看当前目录下的文件名<br>chdir 		        #查看当前目录<br>mkdir		        #创建文件夹<br>cd xxx		        #进入xxx文件夹<br>cd ..&#x2F;..            #向上返回两级目录<br>hexo new “xxx”      #创建新文章，标题是“xxx”(这一步要在D:&#x2F;blog&#x2F;source&#x2F;_posts目录下进行)<br>hexo clean          #发文章前清理一下（我也不知道干嘛的，这一步要在D:&#x2F;blog目录下进行）<br>hexo g              #generation<br>hexo s              #star</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/" data-id="clg6vd0ew00017cnp3o0lhd5m" data-title="我的第一篇blog" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/04/07/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2023-04-07T15:50:21.885Z" itemprop="datePublished">2023-04-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/04/07/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/04/07/hello-world/" data-id="clg6vd09v00007cnp70czdae3" data-title="Hello World" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/04/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87blog/">我的第一篇blog</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/07/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
